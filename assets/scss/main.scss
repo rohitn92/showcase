@@ -20,7 +20,7 @@ body{
   background-image: url("../img/portfolio-bg-1.jpg");
   background-position: left center;
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: 80%;
   height: 100vh;
   position: absolute;
 }
@@ -32,7 +32,7 @@ body{
   opacity: 0;
   position: absolute;
   display: block;
-  margin-top: 50vh;
+  margin-top: 52vh;
   font-size: 1.5em;
   animation-name: showname;
   animation-duration: 1s;
@@ -70,27 +70,87 @@ body{
 #name{
 width: 0.25em;
 height: 2em;
-margin-left: 11%;
-background: red;
+margin-left: 30%;
+background: #f14e3b;
 position: absolute;
 display: block;
-margin-top: 50vh;
+margin-top: 52vh;
 animation-name: stretch;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   animation-delay: 1s;
-  animation-direction: alternate;
-  animation-iteration-count: 2;
+  animation-direction: normal;
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-play-state: running;
   z-index: 2;
 }
 
 @keyframes stretch {
-  from{
+  0%{
     width: 0.25em;
+    margin-left: 30%;
   }
-  to{
+  50%{
     width: 20%;
+    margin-left: 10%;
+  }
+  100%{
+    width: 0.25em;
+    margin-left: 11%;
   }
 }
+
+
+  @media screen and (max-width: 1280px){
+    #disp{
+      font-size: 1.2em;
+    }
+  }
+
+  @media screen and (max-width: 980px){
+    #name{
+      margin-left: 45%;
+    }
+    #name{
+      height: 1.8em;
+    }
+    @keyframes stretch {
+      0%{
+        width: 0.25em;
+        margin-left: 45%;
+      }
+      50%{
+        width: 30%;
+        margin-left: 16%;
+      }
+      100%{
+        width: 0.25em;
+        margin-left: 11%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 736px){
+    #disp{
+      font-size: 1em;
+    }
+    #mouse{
+      height:38px;
+    }
+    #name{
+      height: 1.5em;
+    }
+  }
+
+  @media screen and (max-width: 480px){
+    #disp{
+      font-size: 0.8em;
+    }
+    #name{
+      height: 1em;
+    }
+    #mouse{
+      height:20px;
+    }
+  }
