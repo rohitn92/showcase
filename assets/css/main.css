@@ -30,7 +30,7 @@ body {
   animation-name: showname;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
   animation-direction: normal;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -60,7 +60,7 @@ body {
   display: block;
   margin-top: 52vh;
   animation-name: stretch;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-delay: 1s;
   animation-direction: normal;
@@ -73,9 +73,12 @@ body {
   0% {
     width: 0.25em;
     margin-left: 30%; }
-  50% {
-    width: 20%;
-    margin-left: 10%; }
+  25% {
+    margin-left: 11%;
+    width: 0.25em; }
+  75% {
+    width: 25%;
+    margin-left: 11%; }
   100% {
     width: 0.25em;
     margin-left: 11%; } }
@@ -84,7 +87,7 @@ body {
     font-size: 1.2em; } }
 @media screen and (max-width: 980px) {
   #name {
-    margin-left: 45%; }
+    margin-left: 40%; }
 
   #name {
     height: 1.8em; }
@@ -92,10 +95,13 @@ body {
   @keyframes stretch {
     0% {
       width: 0.25em;
-      margin-left: 45%; }
-    50% {
+      margin-left: 40%; }
+    25% {
+      margin-left: 11%;
+      width: 0.25em; }
+    75% {
       width: 30%;
-      margin-left: 16%; }
+      margin-left: 11%; }
     100% {
       width: 0.25em;
       margin-left: 11%; } } }
@@ -113,9 +119,24 @@ body {
     font-size: 0.8em; }
 
   #name {
+    margin-left: 35%;
     height: 1em; }
 
   #mouse {
-    height: 20px; } }
+    height: 20px; }
+
+  @keyframes stretch {
+    0% {
+      width: 0.25em;
+      margin-left: 35%; }
+    25% {
+      margin-left: 11%;
+      width: 0.25em; }
+    75% {
+      width: 35%;
+      margin-left: 11%; }
+    100% {
+      width: 0.25em;
+      margin-left: 11%; } } }
 
 /*# sourceMappingURL=main.css.map */
