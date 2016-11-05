@@ -41,7 +41,7 @@ body {
   letter-spacing: 0.2em; }
 
 #mouse {
-  right: 5%;
+  left: 90%;
   position: absolute;
   display: block;
   margin-top: 50vh;
