@@ -23,6 +23,11 @@ body{
   background-size: 80%;
   height: 100vh;
   position: absolute;
+  animation-duration: 2s !important;
+  	-webkit-animation-duration: 2s !important;
+  	-moz-animation-duration: 2s !important;
+  	-o-animation-duration: 2s !important;
+  	-ms-animation-duration: 2s !important;
 }
 
 #disp{
@@ -37,7 +42,7 @@ body{
   animation-name: showname;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
-  animation-delay: 2.5s;
+  animation-delay: 3s;
   animation-direction: normal;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -83,7 +88,7 @@ margin-top: 52vh;
 animation-name: stretch;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
   animation-direction: normal;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

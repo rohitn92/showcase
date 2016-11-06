@@ -7,12 +7,12 @@
 	<title>Rohit Nigam | PORTFOLIO </title>
 
 	<!--stylesheets-->
-	<link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/animate.min.css"/>
+	<link rel="stylesheet" href="assets/css/main.css" />
 
 </head>
 
-<body>
+<body class="animated fadeInDown">
 
 <div id="banner">
 <div id="name">
@@ -29,7 +29,9 @@ ROHIT NIGAM
 <script src="assets/js/jquery.min.js"></script>
 <script>
 $(document).on('click touchstart', function () {
-window.alert("helo");
+$('body').addClass('fadeOutUp');
+setTimeout(function(){ window.location.href = 'projects.html'; current=target;}, 2000);
+
 });
 </script>
 
