@@ -27,7 +27,7 @@ header {
   position: fixed; }
 
 #project-list {
-  padding: 3em 0 0 0;
+  padding: 6em 0 0 0;
   width: 90%;
   margin: 0 auto;
   position: relative; }
@@ -63,17 +63,17 @@ header {
   z-index: 1; }
 
 .left .proj-info {
-  left: 20%; }
+  margin-left: 10%; }
 .left .proj-thumb {
   left: 0%; }
 .left .serial {
   margin-left: -10%; }
 
 .right .proj-info {
-  left: 10%; }
+  margin-left: 10%; }
 .right .serial {
   margin-left: -10%; }
 .right .proj-thumb {
-  left: 10%; }
+  margin-left: 10%; }
 
 /*# sourceMappingURL=project.css.map */

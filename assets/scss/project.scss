@@ -37,7 +37,7 @@ position: fixed;
 }
 
 #project-list{
-  padding:3em 0 0 0;
+  padding:6em 0 0 0;
   width: 90%;
   margin:0 auto;
   position: relative;
@@ -77,12 +77,12 @@ position: fixed;
 
 .proj-title,.proj-desc,.proj-keys{ position: relative; z-index: 1;}
 .left{
-  .proj-info{left: 20%;}
+  .proj-info{margin-left: 10%;}
   .proj-thumb{left: 0%;}
   .serial{margin-left:-10%;}
 }
 .right{
-  .proj-info{left: 10%;}
-  .serial{margin-left:-10%;}
-  .proj-thumb{left: 10%;}
+  .proj-info{margin-left: 10%;}
+.serial{margin-left:-10%;}
+  .proj-thumb{margin-left: 10%;}
 }
