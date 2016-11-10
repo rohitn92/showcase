@@ -6,7 +6,9 @@
 
 $primary_font: 'Noto Serif', serif;
 $seconday_font: 'Noto Sans', sans-serif;
-$number-font: 'Mark Words', cursive;
+$number_font: 'Mark Words', cursive;
+
+$theme_red: #E85849;
 
 html,body{
   	-webkit-font-smoothing: antialiased;
@@ -72,13 +74,37 @@ position: fixed;
     z-index: 0;
     font-size: 10em;
     position: absolute;
-    font-family: "Mark my Words";
+    font-family: $number_font;
 }
+
+.read-more{
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      -ms-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+  a{
+    text-decoration: none;
+    color: $theme_red;
+  }
+  img{
+    padding: 1em;
+    vertical-align: middle;
+  }
+}
+
+.project:hover{
+  .read-more{
+    opacity: 1;
+  }
+}
+
 
 .proj-title,.proj-desc,.proj-keys{ position: relative; z-index: 1;}
 .left{
   .proj-info{margin-left: 10%;}
-  .proj-thumb{left: 0%;}
+  .proj-thumb{margin-right: 10%;}
   .serial{margin-left:-10%;}
 }
 .right{

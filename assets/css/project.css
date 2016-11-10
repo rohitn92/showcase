@@ -56,7 +56,24 @@ header {
   z-index: 0;
   font-size: 10em;
   position: absolute;
-  font-family: "Mark my Words"; }
+  font-family: "Mark Words", cursive; }
+
+.read-more {
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
+  .read-more a {
+    text-decoration: none;
+    color: #E85849; }
+  .read-more img {
+    padding: 1em;
+    vertical-align: middle; }
+
+.project:hover .read-more {
+  opacity: 1; }
 
 .proj-title, .proj-desc, .proj-keys {
   position: relative;
@@ -65,7 +82,7 @@ header {
 .left .proj-info {
   margin-left: 10%; }
 .left .proj-thumb {
-  left: 0%; }
+  margin-right: 10%; }
 .left .serial {
   margin-left: -10%; }
 
