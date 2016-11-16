@@ -168,4 +168,16 @@ header {
   margin-right: 0;
   margin-left: 10%; }
 
+@media screen and (max-width: 980px) {
+  .proj-info {
+    order: 1;
+    width: 60%; }
+
+  .proj-thumb {
+    order: 2;
+    width: 60%; }
+
+  .project {
+    flex-wrap: wrap; } }
+
 /*# sourceMappingURL=project.css.map */
