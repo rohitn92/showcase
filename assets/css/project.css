@@ -175,7 +175,8 @@ header {
 
   .proj-thumb {
     order: 2;
-    width: 60%; }
+    width: 80%;
+    margin-right: 0 !important; }
 
   .project {
     flex-wrap: wrap; } }
