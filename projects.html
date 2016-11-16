@@ -23,11 +23,15 @@
 <h3> / PORTFOLIO </h3>
 
 	<ul>
-	  <li> <a href = "" target=""> Projects </a></li>
+	  <li class="current-item"> <a href = "" target=""> Projects </a></li>
 	  <li> <a href = "" target=""> Blog </a></li>
 	  <li> <a href = "" target=""> About </a></li>
 	  <li> <a href = "" target=""> Contact </a></li>
 	</ul>
+
+	<div id="ham-div" class="animated fadeIn">
+			<img id="ham" src="assets/img/ham.svg" class="">
+		</div>
 
 	</header>
 
@@ -250,6 +254,17 @@
 
 </section>
 
+<div id="modal-menu">
+	<div id="close-div" class="">
+		<img src="assets/img/close.svg" class="">
+	</div>
+	<ul>
+		<li> <a href="#about">Projects</a> </li>
+		<li> <a href="#skills">Blog</a> </li>
+		<li> <a href="#exp">About</a> </li>
+		<li> <a href="#contact">Contact</a> </li>
+	</ul>
+</div>
 
 <script src="assets/js/jquery.min.js"></script>
 
@@ -274,6 +289,19 @@ var lastScrollTop = 0;
 				lastScrollTop = st;
 
 			});
+
+
+			$("#ham").click(function(){
+
+	$("#modal-menu").css({"opacity":"0.9","z-index":"5"});
+
+});
+
+$("#close-div").click(function(){
+
+ $("#modal-menu").css({"opacity":"0","z-index":"-5"});
+
+});
 </script>
 
 </body>

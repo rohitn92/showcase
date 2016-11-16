@@ -26,7 +26,7 @@ header {
   background: red;
   width: 100%;
   top: 0;
-  z-index: 10;
+  z-index: 2;
   position: fixed;
   background-color: white;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.07);
@@ -46,10 +46,13 @@ header {
     font-weight: normal;
     display: inline-block; }
   header ul {
-    left: 40%;
-    position: relative;
+    right: 10%;
+    position: absolute;
     display: inline-block;
-    list-style: none; }
+    list-style: none;
+    margin: 0;
+    margin-top: 1em;
+    vertical-align: middle; }
     header ul li {
       display: inline-block;
       margin-right: 3vw;
@@ -59,6 +62,16 @@ header {
         color: #000000; }
         header ul li a:link, header ul li a:visited header ul li a:hover header ul li a:active {
           color: #000000; }
+
+#ham-div {
+  display: none;
+  position: fixed;
+  right: 10%;
+  opacity: 0;
+  z-index: 10; }
+
+#ham {
+  cursor: pointer; }
 
 #project-list {
   padding: 7em 0 0 0;
@@ -77,7 +90,11 @@ header {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.5s ease-in-out;
+  border-bottom: 1px white solid;
+  border-top: 1px white solid; }
+  .project:hover {
+    border-bottom: 1px red solid; }
 
 .left {
   border-left: 1px white solid; }
@@ -168,6 +185,42 @@ header {
   margin-right: 0;
   margin-left: 10%; }
 
+.current-item {
+  padding-bottom: 5px;
+  border-bottom: 3px red solid; }
+
+#modal-menu {
+  opacity: 0;
+  top: 0;
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: -5;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+  #modal-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto; }
+    #modal-menu ul li {
+      font-size: 2em;
+      margin: 2em 0;
+      font-weight: normal !important; }
+      #modal-menu ul li a {
+        text-decoration: none;
+        color: black; }
+  #modal-menu #close-div {
+    position: relative;
+    left: 85%;
+    margin: 2.5em 0 0 0;
+    cursor: pointer; }
+
 @media screen and (max-width: 980px) {
   .proj-info {
     order: 1;
@@ -176,9 +229,38 @@ header {
   .proj-thumb {
     order: 2;
     width: 80%;
-    margin-right: 0 !important; }
+    margin-right: 0 !important;
+    margin-left: 0 !important; }
 
   .project {
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    border-bottom: 1px white solid;
+    border-left: 1px white solid;
+    border-right: 1px white solid; }
+    .project:hover {
+      border-bottom: 1px white solid;
+      border-left: 1px white solid;
+      border-right: 1px white solid; }
+
+  .read-more {
+    opacity: 1; } }
+@media screen and (max-width: 640px) {
+  header ul {
+    display: none; }
+
+  .proj-info {
+    width: 80%; }
+
+  .proj-thumb {
+    width: 90%; }
+
+  #ham-div {
+    margin-top: 1.5em;
+    display: inline-block;
+    position: absolute;
+    right: 15%; }
+
+  header #logo-div img {
+    width: 25px; } }
 
 /*# sourceMappingURL=project.css.map */

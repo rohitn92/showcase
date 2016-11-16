@@ -42,7 +42,7 @@ html,body{
   background: red;
   width: 100%;
   top: 0;
-  z-index: 10;
+  z-index: 2;
   position: fixed;
   background-color: white;
    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.07);
@@ -66,10 +66,13 @@ html,body{
   }
 
   ul{
-    left: 40%;
-        position: relative;
+    right: 10%;
+        position: absolute;
         display: inline-block;
         list-style: none;
+        margin: 0;
+        margin-top: 1em;
+        vertical-align: middle;
       li{
         display: inline-block;
         margin-right: 3vw;
@@ -84,6 +87,18 @@ html,body{
       }
   }
   }
+}
+
+#ham-div{
+  display: none;
+  position: fixed;
+  right: 10%;
+  opacity: 0;
+  z-index: 10;
+}
+
+#ham{
+ cursor: pointer;
 }
 
 #project-list{
@@ -106,6 +121,14 @@ html,body{
         -o-transition: all 0.5s ease-in-out;
         -ms-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out;
+        border-bottom:1px white solid;
+        border-top:1px white solid;
+
+
+      &:hover{
+      //  border-top:1px red solid;
+          border-bottom:1px red solid;
+      }
 }
 
 .left {
@@ -211,6 +234,52 @@ html,body{
 //  padding: 5em;
 }
 
+.current-item{
+  padding-bottom: 5px;
+border-bottom: 3px red solid;
+}
+
+
+#modal-menu{
+  opacity: 0;
+  top: 0;
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: -5;
+  -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      -ms-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+
+      ul{
+        list-style: none;
+        padding: 0;
+text-align: center;
+margin: 0 auto;
+        li{
+          font-size: 2em;
+          margin:2em 0;
+            font-weight: normal !important;
+            a{
+              text-decoration: none;
+              color:black;
+            }
+        }
+      }
+
+
+        #close-div{
+          position: relative;
+    left: 85%;
+    margin: 2.5em 0 0 0;
+    cursor: pointer;
+        }
+}
+
 
 
 
@@ -223,13 +292,54 @@ html,body{
   order:2;
   width: 80%;
   margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 .project{
   flex-wrap: wrap;
+  border-bottom:1px white solid;
+  border-left:1px white solid;
+  border-right:1px white solid;
+  &:hover{
+  //  border-top:1px red solid;
+      border-bottom:1px white solid;
+      border-left:1px white solid;
+      border-right:1px white solid;
+
+  }
+}
+
+.read-more{
+  opacity: 1;
 }
 }
 
   @media screen and (max-width: 736px){
+
+
+
+}
+
+@media screen and (max-width: 640px){
+
+header ul {display: none;}
+
+.proj-info{
+  width: 80%;
+}
+.proj-thumb{
+  width: 90%;
+}
+
+#ham-div{
+  margin-top: 1.5em;
+    display: inline-block;
+    position: absolute;
+    right: 15%;
+}
+
+header #logo-div img {
+    width: 25px;
+}
 
 }
   @media screen and (max-width: 480px){
