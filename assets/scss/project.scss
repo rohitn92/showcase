@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif');
+//@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
 @font-face {
     font-family: "Mark Words";
     src: url('../fonts/mark_my_words.ttf') format("truetype");
 }
 
-$primary_font: 'Noto Serif', serif;
-$seconday_font: 'Noto Sans', sans-serif;
+@font-face {
+    font-family: "Projects Font";
+    src: url('../fonts/project_font.otf') format("truetype");
+}
+
+
+$primary_font: 'Projects Font', sans-serif;
+$seconday_font: 'Abril Fatface', cursive;
 $number_font: 'Mark Words', cursive;
 
 $theme_red: #E85849;
@@ -29,17 +37,57 @@ html,body{
   }
 
 
-header{
-  padding: 1em;
-background: red;
-width: 100%;
-top: 0;
-z-index: 10;
-position: fixed;
+  header{
+    padding: 1em;
+  background: red;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  position: fixed;
+  background-color: white;
+   box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.07);
+   color: #474747;
+   font-weight: normal;
+
+   #logo-div{
+     position: relative;
+     vertical-align: middle;
+     left: 10%;
+     display: inline-block;
+     padding: 0.5em;
+   		img{width: 35px;}
+     }
+
+  h3{
+    position: relative;
+    left: 10%;
+    font-weight: normal;
+    display: inline-block;
+  }
+
+  ul{
+    left: 40%;
+        position: relative;
+        display: inline-block;
+        list-style: none;
+      li{
+        display: inline-block;
+        margin-right: 3vw;
+        font-size: 1em;
+
+        a{
+          text-decoration: none;
+          color: #000000;
+          &:link, &:visited &:hover &:active {
+    color: #000000;
+}
+      }
+  }
+  }
 }
 
 #project-list{
-  padding:6em 0 0 0;
+  padding:7em 0 0 0;
   width: 90%;
   margin:0 auto;
   position: relative;
@@ -51,6 +99,29 @@ position: fixed;
   justify-content: center;
     align-items: center;
     display: flex;
+    padding: 5em 0;
+    background: transparent;
+    -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+}
+
+.left {
+  border-left:1px white solid;
+}
+
+.left:hover {
+  border-left:1px red solid;
+}
+
+.right {
+  border-right:1px white solid;
+}
+
+.right:hover {
+  border-right:1px red solid;
 }
 
 .proj-info{
@@ -71,6 +142,7 @@ position: fixed;
 
 .serial{
   color: #f5f5f5;
+  margin-top: -10%;
     z-index: 0;
     font-size: 10em;
     position: absolute;
@@ -80,11 +152,11 @@ position: fixed;
 
 .read-more{
   opacity: 0;
-  -webkit-transition: all .5s ease-in-out;
-      -moz-transition: all .5s ease-in-out;
-      -o-transition: all .5s ease-in-out;
-      -ms-transition: all .5s ease-in-out;
-      transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
   a{
     text-decoration: none;
     color: $theme_red;
@@ -104,12 +176,12 @@ position: fixed;
 
 .proj-title,.proj-desc,.proj-keys{ position: relative; z-index: 1;}
 .left{
-  .proj-info{margin-left: 10%;}
+  .proj-info{margin-left: 10%;  margin-right: 10%;}
   .proj-thumb{margin-right: 10%;}
   .serial{margin-left:-10%;}
 }
 .right{
-  .proj-info{margin-left: 10%;}
+  .proj-info{ margin-left: 10%; margin-right: 10%; }
 .serial{margin-left:-10%;}
   .proj-thumb{margin-left: 10%;}
 }
@@ -117,12 +189,13 @@ position: fixed;
 
 .proj-title{
   font-size: 1.5em;
-    font-weight: bold;
+  font-family: $seconday_font;
+    font-weight: normal;
 }
 .proj-desc{
   line-height: 2em;
     font-size: 0.9em;
-    display: none;
+
 }
 .proj-keys{
   span{
@@ -135,5 +208,19 @@ position: fixed;
 #gif{
   margin-right: 0;
   margin-left: 10%;
-  padding: 5em;
+//  padding: 5em;
 }
+
+
+
+
+@media screen and (max-width: 980px){
+
+}
+
+  @media screen and (max-width: 736px){
+
+}
+  @media screen and (max-width: 480px){
+
+  }
