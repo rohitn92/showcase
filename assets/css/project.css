@@ -220,6 +220,8 @@ header {
       #modal-menu ul li a {
         text-decoration: none;
         color: black; }
+      #modal-menu ul li .red {
+        color: red; }
   #modal-menu #close-div {
     position: relative;
     left: 80%;
