@@ -185,7 +185,7 @@ html,body{
     color: $theme_red;
   }
   img{
-    padding: 1em;
+    padding: 0.9em;
     vertical-align: middle;
   }
 }
@@ -249,17 +249,22 @@ border-bottom: 3px red solid;
   height: 100%;
   background: white;
   z-index: -5;
-  -webkit-transition: all .3s ease-in-out;
-      -moz-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-      -ms-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
 
       ul{
         list-style: none;
         padding: 0;
 text-align: center;
 margin: 0 auto;
+-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
         li{
           font-size: 2em;
           margin:2em 0;
@@ -274,7 +279,7 @@ margin: 0 auto;
 
         #close-div{
           position: relative;
-    left: 85%;
+    left: 80%;
     margin: 2.5em 0 0 0;
     cursor: pointer;
         }
@@ -331,10 +336,10 @@ header ul {display: none;}
 }
 
 #ham-div{
-  margin-top: 1.5em;
+  margin-top: 1.4em;
     display: inline-block;
     position: absolute;
-    right: 15%;
+    right: 20%;
 }
 
 header #logo-div img {

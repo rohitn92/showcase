@@ -56,7 +56,7 @@ body{
 
 #mouse{
   display: none;
-  left: 90%;
+  left: 86%;
   position: absolute;
   display: block;
   margin-top: 50vh;
@@ -155,7 +155,7 @@ animation-name: stretch;
       font-size: 1em;
     }
     #mouse{
-      height:38px;
+      height:18px;
     }
     #name{
       height: 1.5em;
@@ -171,7 +171,7 @@ animation-name: stretch;
       height: 1em;
     }
     #mouse{
-      height:20px;
+      height:10px;
     }
     @keyframes stretch {
       0%{
