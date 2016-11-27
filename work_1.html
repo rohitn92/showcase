@@ -8,6 +8,9 @@
 
 	<!--stylesheets-->
   <link rel="stylesheet" href="assets/css/animate.min.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
   <link rel="stylesheet" href="assets/css/content.css" />
 
 </head>
@@ -17,7 +20,7 @@
   <a href=""><img src="assets/img/back-btn.svg" alt="Back" id="back"></a>
   <a href=""><img src="assets/img/menu-btn.svg" alt="Menu" id="menu"></a>
   <a href=""><img src="assets/img/top-btn.svg" alt="Up" id="up"></a>
-  
+
 <section id="work-content">
 
 <h1 id="work-title">Title</h1>
@@ -32,26 +35,80 @@
 
 <div class="center-photo"><img src="assets/img/dummy-img.png"></div>
 
-<div class = "small-slider"> </div>
 
-<div class = "big-slider"> </div>
+<div class="slider-for">
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+</div>
+<div class = "small-slider">
+
+	  <div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	  <div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	  <div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+		<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+		<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+		<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+
+</div>
+
+<div class = "big-slider">
+
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+	<div class="ss-img-div"><img src="assets/img/dummy-img.png"></div>
+
+</div>
 
 </section>
 
-<footer>
 
+<script src="assets/js/jquery.min.js"></script>
 
-<h3>Rohit Nigam | PORTFOLIO </h3>
+<script type="text/javascript" src="slick/slick.min.js"></script>
 
-<ul>
-  <li> <a href = "" target=""> Projects </a></li>
-  <li> <a href = "" target=""> Blog </a></li>
-  <li> <a href = "" target=""> About </a></li>
-  <li> <a href = "" target=""> Contact </a></li>
-</ul>
+<script>
 
-</footer>
+$(document).ready(function(){
 
+	$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.small-slider'
+});
+
+  $('.small-slider').slick({
+		dots: true,
+		infinite: true,
+		centerMode: true,
+		slidesToShow: 3,
+		autoplay: true,
+ autoplaySpeed: 5000,
+		slidesToScroll: 3,
+		asNavFor: '.slider-for',
+  focusOnSelect: true
+  });
+
+	$('.big-slider').slick({
+		dots: true,
+		infinite: true,
+		centerMode: true,
+		slidesToShow: 1,
+		slidesToScrool: 3,
+	focusOnSelect: true,
+	autoplay: true,
+autoplaySpeed: 3000
+	});
+});
+</script>
 
 </body>
 
