@@ -17,9 +17,9 @@
 
 <body>
 
-  <a href=""><img src="assets/img/back-btn.svg" alt="Back" id="back"></a>
-  <a href=""><img src="assets/img/menu-btn.svg" alt="Menu" id="menu"></a>
-  <a href=""><img src="assets/img/top-btn.svg" alt="Up" id="up"></a>
+  <a href="projects.html"><img src="assets/img/back-btn.svg" alt="Back" id="back"></a>
+<img src="assets/img/menu-btn.svg" alt="Menu" id="menu">
+  <a href="#work-content"><img src="assets/img/top-btn.svg" alt="Up" id="up"></a>
 
 <section id="work-content">
 
@@ -68,6 +68,33 @@
 
 </section>
 
+<div id="modal-projects">
+<div id="modal-project-list">
+<div class="modal-list-item">
+	<a href="">
+<img src="assets/img/dummy-img.png">
+<p class="modal-desc">Some text</p>
+</a>
+</div>
+
+<div class="modal-list-item">
+	<a href="">
+<img src="assets/img/dummy-img.png">
+<p class="modal-desc">Some text</p>
+</a>
+</div>
+
+<div class="modal-list-item">
+	<a href="">
+<img src="assets/img/dummy-img.png">
+<p class="modal-desc">Some text</p>
+</a>
+</div>
+
+</div>
+
+
+</div>
 
 <script src="assets/js/jquery.min.js"></script>
 
@@ -108,6 +135,15 @@ $(document).ready(function(){
 autoplaySpeed: 3000
 	});
 });
+
+$("#menu").click(function(){
+
+	 $("#modal-projects").css({"opacity":"0.9","z-index":"5"});
+
+});
+
+
+
 </script>
 
 </body>

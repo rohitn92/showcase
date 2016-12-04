@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,400i');
 $primary_font: 'Noto Serif', serif;
 $seconday_font: 'Noto Sans', sans-serif;
 
@@ -45,15 +45,12 @@ html,body{
   	background: #ffffff;
   	margin: 0 auto;
   	padding: 0;
-  	width: 100%;
-  	max-width: 100%;
   	font-family:$primary_font;
   	font-size: 1em;
     font-weight: normal;
   }
 
   body{
-    max-width: 1680px;
   }
 
 #nav-bar{
@@ -66,18 +63,21 @@ html,body{
 #back{
   position: fixed;
   left: 5%;
+  height: 2em;
 }
 
 #menu{
   position: fixed;
   right: 5%;
   opacity: 0.5;
+  width: 2em;
 }
 
 #up{
   position: fixed;
 bottom: 15%;
 left: 5%;
+width: 2.5em;
 }
 
 #work-content{
@@ -105,7 +105,7 @@ z-index: 2;
   font-size: 1.500em;
 }
 
-.text-content{
+.text-content, ul{
   font-size: 1.125em;
   line-height: 1.7em;
 }
@@ -114,6 +114,9 @@ z-index: 2;
   padding: 1em;
   text-align: center;
   margin: 0 auto;
+  img{
+    width: 100%;
+  }
 }
 
 .bold {font-weight: bold;}
@@ -186,4 +189,66 @@ ul{
       font-size: 1.125em;
     }
 }
+}
+
+#modal-projects{
+opacity: 0;
+top: 0;
+width: 100%;
+height: 100%;
+position: fixed;
+overflow-x: scroll;
+overflow-y: hidden;
+white-space: nowrap;
+background: white;
+z-index: -5;
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+}
+
+#modal-project-list{
+  top:20%;
+  position: relative;
+}
+
+.modal-list-item{
+  display: inline-block;
+  padding: 3em;
+
+  &:hover{
+
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  img{
+    width: 100%;
+    max-width: 500px;
+  }
+
+  p{
+    border-bottom: 1px solid #dddddd;
+    padding:2em 0;
+    margin:0;
+  }
+
+}
+
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width: 980px){
+
+body { font-size: 0.8em;}
+
+}
+
+@media screen and (max-width: 640px){
+  body { font-size: 0.6em;}
 }
