@@ -78,7 +78,12 @@ html, body {
     font-style: normal; }
 
 .mid-headings {
+  padding-top: 1em;
   font-size: 1.500em; }
+
+.sub-heading {
+  font-size: 1.00em;
+  font-weight: bold; }
 
 .text-content, ul {
   font-size: 1.125em;
