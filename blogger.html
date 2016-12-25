@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Rohit Nigam | PORTFOLIO </title>
+
+	<!--stylesheets-->
+  <link rel="stylesheet" href="assets/css/animate.min.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="assets/css/content.css" />
+
+</head>
+
+<body>
+	<a href="projects.html"><img src="assets/img/back-btn.svg" alt="Back" id="back"></a>
+	<img src="assets/img/menu-btn.svg" alt="Menu" id="menu">
+  <a href="#work-content"><img src="assets/img/top-btn.svg" alt="Up" id="up"></a>
+
+<section id="work-content">
+
+<h1 id="work-title"> Material Case Study & Blogger Redesign</h1>
+
+<div id="d-brief">
+  <p> <span class="bold">Design Brief: </span> The purpose of this project is two fold -
+ 1. Study and understand how an existing design system works — its philosophies, aesthetics and interaction principles, implemented across various applications; observe its weak points and challenge its assumptions.
+2. Study existing blogging and social media platforms, where they succeed and what is missing, not just for ardent bloggers but everyday users who explore online content a lot. Use these observations to reimagine Google’s Blogger (Blogspot) platform.
+</p>
+
+</div>
+<div class="center-photo"><img src="assets/img/projects/blogger/blogger-cover.png"></div>
+
+<h2 class="mid-headings">What is Material Design?</h2>
+
+<p class="text-content">
+On the surface, Material can be seen as a union of Skeuomorphic and Flat Design, taking paper and ink as an inspiration and turning them into tactile objects with bright colors, elevations and shadows, and motion. But what Material really is — a first well-done attempt at coming up with a design system for digital interfaces, and using the metaphor of ‘paper’ to define how objects within said interface present themselves and interact with each other. It is more than just a defined set of specs or visual components, rather a philosophy of how information should be communicated to a user with meaning, hierarchy and intention.
+</p>
+
+<blockquote> Digital interfaces are still in their infancy with only a few decades of work to show for it, and that’s makes Material one of its kind, bringing digital design out of its infancy.
+</blockquote>
+
+<p class="text-content">
+<img class="filler-img" src="assets/img/projects/blogger/filler1.png">
+My main goal was to implement this design system to bring one of Google’s own product, Blogger, back to life. Blogger has not received any updates in the past few years. It’s app still has a simple editor interface, with no way of interaction with other blogs on Blogspot.
+But this needed to be more than a blatant application of a design system or a simple redesign without serving purpose or addressing any need. So I decided to first challenge Material Design, explore certain aspects and presumptions of the philosophy behind it, and see if it works in context of real world applications with real everyday users, especially those who are not design professionals and are unaware of the purpose of this design style.
+  </p>
+
+	<h2 class="mid-headings">Material Design Study Survey</h2>
+
+	<p class="text-content">
+    I created a survey to challenge the main principles of Material design - The Paper Metaphor, Adaptive Layouts, Interaction, and Motion.
+    The questions meant to test out how does a user visually perceive the system.
+After 100 responses (with 84 non-designers) by individuals in different age groups and different professions, I made the following observations -
+
+76% had already heard about material design
+45% perceived it as “3D depth of field illusion” while only 32% recognised the Paper metaphor
+More than 60% found the components neat and visually pleasing, even on desktop, if it was done right.
+67% did not like mixed sized card arrangements, as seen on Pinterest or Google+.
+76% of the participants were android users, and after showing them Google’s material design video, 69% actually appreciated what the system was about.
+See full results
+
+<img class="filler-img" src="assets/img/projects/blogger/filler2.png">
+Now this is a really small, almost insignificant sample size with questions framed in a very naive manner, but it gave me some direction as to what I need to improve and pay attention to before I implement Material Design.
+For the next step, I explored the UX and design of the following sites — Wordpress, Medium, Tumblr, Instagram, Flipboard, Google+, Google Arts & Culture, Google Spaces, Google Travels, Google Inbox, Google Keep, Google Photos, Google Blog, Facebook, Snapchat, Vine, Pinterest, Twitter— going through their signup and on-boarding process, integration of social networks, content discovery, profiles, and user engagement as well as their implementation of Material Design, on mobile and desktop (if available), noting down the pros, cons, successful design patterns, interactions and visuals.
+With all these observations in mind, I began redesigning Google’s Blogger.
+
+</p>
+
+<h2 class="mid-headings">Google Blogger Redesign</h2>
+
+<p class="text-content">
+	The most elemental purpose of a blog is a place to tell stories.
+</p>
+
+<h3 class="sub-heading"> Product Icon</h3>
+<img class="filler-img" src="assets/img/projects/blogger/blogger-old.png" style="width:100px;">
+<p class="text-content">
+Blogger has had a very simplified logo, an orange background with a white ‘B’ mark on it.Adhering to Google’s methodology, I started to craft the redesigned logo, playing with elevations and lighting.
+The background of the logo is mimicking the centerfold of a journal or diary — the traditional medium for writing personal stories, and the ‘B’ is not just ink on paper, but an entity of its own that has left the bounds of the book and rests at a certain elevation.
+</p>
+<div class="dual-photos"><img src="assets/img/projects/blogger/blogger-paper.jpeg"><img src="assets/img/projects/blogger/blogger-wire.jpeg"></div>
+<div class="center-photo"><img src="assets/img/projects/blogger/blogger-logo.jpeg"></div>
+
+
+	<h3 class="mid-heading"> Information Architecture and User Experience Design </h3>
+<p class="text-content">
+  Studying various other blogging platforms and social networks, I went over how I would like to arrange the content and information inside the app and tailor the user journey. After some iterations as well as discussion with a few active bloggers and social media users that I personally knew, I came up with the following structure -
+  Home Screen — This shall contain the feed of latest posts from your followings. The content should be fully displayed in form of cards, except for long-form posts. All posts can be viewed by tapping to open in full. You can like, share and bookmark posts, filter them with tags and other criteria.
+  Discover Screen — Content discovery is one of the main goals of the application. It should be discoverable via various filters, tags, trending topics and more.
+  Favourites — All posts must allow bookmark, like, share and adding to a collection. Another unique feature I came up with was to allow snoozing of posts (inspired by Google Inbox’s snooze feature). Often, we do not have time to read something and want to save it for later. But we either resort to bookmarking it, which creates a strange dynamic if you use bookmarks for your most valued and favorite posts. Else we rely on third-party bookmark apps like Pocket. Also, there is no way of being reminded about that bookmarked post. Snoozed post notification can solve this problem!
+  Blog Profile — One of the most important aspects of blogging is individuality. Each user wants to customise the look and feel of their blog to best suit their style of story-telling. Wordpress and Blogger both offer various themes to be used. However, this would not go well with our design philosophy. Hence, we allow profile customisation via cover images and profile pictures, and use the primary and accent colors to further tailor the look for a profile and make it stand out (explained further below in the visual designs).
+  </p>
+
+
+
+	<h3 class="mid-heading"> Wireframes </h3>
+	<p class="text-content">
+	After designing the basic components (Post cards, saved post tiles, topic tiles etc.) I designed the wireframes and used Marvel to create a basic prototype —https://marvelapp.com/2f26h7b.
+The wireframe prototypes were used to get initial feedback from other designers and improved upon the designs.
+</p>
+
+<div class="center-photo"><img src="assets/img/projects/blogger/post-desktop.gif"></div>
+<div class="center-photo"><img src="assets/img/projects/blogger/desktop-wf.png"></div>
+
+<h3 class="mid-heading"> Visual Design </h3>
+<div class="center-photo"><img src="assets/img/projects/blogger/vd-cover.png"></div>
+
+<p class="text-content">
+I wanted the visual design to be more than just UI components put together according to some guideline. It needed to serve different use cases and create patterns to improve content discovery and consumption. The wireframes, prototypes and final design push on those ideas.
+1. Home Page - As a user scrolls through their feed, the header for each post lifts up to the same elevation as the status bar and sticks there until the post is scrolled through, then it goes back down to join the footer and scrolls off the screen. A difference to note between desktop and mobile blog post UI cards is that the share icon is kept under the contextual menu on mobile, while on the desktop it’s kept on the card footer. This is because we do not want the user to stray away from the app. On desktop, it is much more acceptable to switch between applications and browser tabs, but on mobile, any action that can lead the user out of the app will be disengaging. However, we still want to provide the option if user chooses to use it.
+
+2. Discover - This section is divided into 3 parts on mobile — Explore, Topics and Blogs. Each one offers different aspects to content discovery. Explore shows you the trending posts and editor picks, or just browse through the latest public feed (that will be curated over time for you the more you use the app). Under Topics, you can look for the latest trending #hashtags and hot topics, along with the collection of all the topics Blogger offers to be followed (this will contribute to the curation of your Explore feed). Finally, in the Blogs section, you can look at the most trending blogs. Search is always available while you are in Discover mode to find more content.The Desktop design is slightly different. Instead of dividing the page into tabs, I created a single page with scrollable sections.
+3. Profile - This is one of the most important parts of Blogger. The profiles need to stand out for every individual. But it still has to be contained within the same platform and not look like an external website, so consistency of design with the rest of the application is an important thing to consider.
+This can be achieved by allowing the user to add their own Profile Picture and Cover Image. From there, Blogger will select the most prominent color from the Cover Image using the Palette library, then match it to closest color from Material Design’s color palette to beused as the primary color. The profile’s primary color plays an important role in not just viewing the profile, but also while viewing any post from that blogger in expanded mode.
+</p>
+
+
+
+<div class = "portrait-slider">
+
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/1.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/2.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/3.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/4.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/5.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/6.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/7.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/8.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/9.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/10.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/11.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/12.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/13.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/14.png"></div>
+  <div class="ss-img-div"><img src="assets/img/projects/blogger/15.png"></div>
+
+</div>
+<div class="dual-photos"><img src="assets/img/projects/blogger/blogger-paper.jpeg"><img src="assets/img/projects/blogger/blogger-wire.jpeg"></div>
+
+	<h2 class="mid-headings">Visual Design</h2>
+
+
+
+	<div class="center-photo"><img src="assets/img/projects/fippl/vd-cover.png"></div>
+	<p class="text-content">
+	The bottom navigation bar gives quick access to major parts of the application that helps facilitate social interactions.
+Activity Creation — Creating a new activity is simplified to a singular page with a simple form. All the activities on the app are categorised for tagging and search. You can add people to your activities, make it public for others to request joining it and even share it externally.
+
+Finding People and Activities — A user can look around for people nearby or any activities listed in their vicinity. The search can be filtered using choice of interests, proximity, social connections and a lot more. “Look Around” starts with a simple question asking the user what they are looking to do. A user can pick any category or do a blank search for results matching to all their interests. The results are divided into Activities and People. You can tap to expand the list tiles for more information and send requests.
+</p>
+
+<div class = "portrait-slider">
+
+	<div class="ss-img-div"><img src="assets/img/projects/fippl/1.png"></div>
+	<div class="ss-img-div"><img src="assets/img/projects/fippl/2.png"></div>
+	<div class="ss-img-div"><img src="assets/img/projects/fippl/3.png"></div>
+	<div class="ss-img-div"><img src="assets/img/projects/fippl/5.png"></div>
+	<div class="ss-img-div"><img src="assets/img/projects/fippl/6.png"></div>
+	<div class="ss-img-div"><img src="assets/img/projects/fippl/7.png"></div>
+<div class="ss-img-div"><img src="assets/img/projects/fippl/8.png"></div>
+<div class="ss-img-div"><img src="assets/img/projects/fippl/9.png"></div>
+<div class="ss-img-div"><img src="assets/img/projects/fippl/10.png"></div>
+<div class="ss-img-div"><img src="assets/img/projects/fippl/11.png"></div>
+<div class="ss-img-div"><img src="assets/img/projects/fippl/12.png"></div>
+
+
+</div>
+<p class="text-content">
+
+Also, to leverage some of iOS’ features, I also designed the Peek-Pop options for the search results screen (build with After Effects)
+
+</p>
+
+<div class="center-photo-vertical"><img src="assets/img/projects/fippl/peekpop.gif"></div>
+<div class="center-photo"><img src="assets/img/projects/fippl/peekpop-2.jpeg"></div>
+
+<h2 class="mid-headings">App Prototype</h2>
+<p class="text-content">
+
+To fully demonstrate the app flow, I created a prototype using MarvelApp — https://marvelapp.com/8egge1g
+</p>
+
+<div style="margin:0 auto; text-align:center;">
+<iframe src="https://marvelapp.com/8egge1g?emb=1" width="300" height="601" allowTransparency="true" frameborder="0" align="center"></iframe>
+</div>
+
+</section>
+
+
+<div id="modal-projects">
+<div id="modal-project-list">
+<div class="modal-list-item">
+	<a href="">
+<img src="assets/img/dummy-img.png">
+<p class="modal-desc">Some text</p>
+</a>
+</div>
+
+<div class="modal-list-item">
+	<a href="">
+<img src="assets/img/dummy-img.png">
+<p class="modal-desc">Some text</p>
+</a>
+</div>
+
+<div class="modal-list-item">
+	<a href="">
+<img src="assets/img/dummy-img.png">
+<p class="modal-desc">Some text</p>
+</a>
+</div>
+
+</div>
+
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script>
+$('a[href^="#"]').on('click', function(event) {
+
+	var target = $( $(this).attr('href') );
+
+	if( target.length ) {
+			event.preventDefault();
+			$('html, body').animate({
+					scrollTop: target.offset().top
+			}, 1000);
+	}
+
+});
+
+$(document).ready(function(){
+
+	$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.small-slider'
+});
+
+  $('.small-slider').slick({
+		dots: true,
+		infinite: true,
+		centerMode: true,
+		slidesToShow: 3,
+		autoplay: true,
+ autoplaySpeed: 5000,
+		slidesToScroll: 3,
+		asNavFor: '.slider-for',
+  focusOnSelect: true
+  });
+
+	$('.big-slider').slick({
+		dots: true,
+		infinite: true,
+		centerMode: true,
+		slidesToShow: 1,
+		slidesToScrool: 3,
+	focusOnSelect: true,
+	autoplay: true,
+autoplaySpeed: 3000
+	});
+
+	$('.portrait-slider').slick({
+		dots: true,
+		infinite: true,
+		centerMode: true,
+		slidesToShow: 3,
+		slidesToScrool: 3,
+	focusOnSelect: true,
+	autoplay: true,
+autoplaySpeed: 3000,
+responsive: [
+	{
+		breakpoint: 980,
+		settings: {
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			infinite: true,
+			dots: true
+		}
+	},
+	{
+		breakpoint: 640,
+		settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: true,
+			dots: true
+		}
+	}]
+	});
+
+
+});
+
+
+$("#menu").click(function(){
+
+	 $("#modal-projects").css({"opacity":"0.9","z-index":"5"});
+
+});
+
+
+</script>
+
+</body>
+
+
+</html>
